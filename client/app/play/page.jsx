@@ -82,7 +82,7 @@ const Play = () => {
     return (
       <div
         key={index}
-        className={`w-12 h-12 md:w-24 md:h-24 border-2 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+        className={`w-10 h-10 md:w-24 md:h-24 border-2 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 transform hover:scale-105 ${
           cell.isRevealed
             ? cell.isMine
               ? "bg-red-100 border-red-300"
@@ -156,7 +156,7 @@ const Play = () => {
           ) : null}
         </div>
 
-        <div className="grid grid-cols-5 gap-2 md:gap-4 bg-gray-100 p-4 md:p-6 rounded-2xl shadow-inner">
+        <div className="grid grid-cols-5 gap-1 md:gap-4 bg-gray-100 m-1 p-4 md:p-6 rounded-2xl shadow-inner">
           {grid.map((cell, index) => renderCell(cell, index))}
         </div>
 
