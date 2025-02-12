@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 import Provider from "@/components/provider";
 import { children } from 'react';
 
@@ -11,6 +12,10 @@ export const metadata = {
 const Rootlayout = ({children}) => {
   return (
     <html lang='en'>
+        <head>
+        <script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive"></script>
+
+        </head>
         <body>
             <Provider>
     
@@ -21,6 +26,7 @@ const Rootlayout = ({children}) => {
                 <main className='app'>
                     <Nav/>
                     {children}
+                    <Footer/>
                 </main>
 
             </Provider>
